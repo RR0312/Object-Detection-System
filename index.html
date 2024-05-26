@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+  <h2 id="loadingText">PIET</h2>
+  
+<head>
+  <figure class="image image_resized">
+  <img class="cyber-img" src="https://piet.co.in/wp-content/uploads/2022/04/cropped-cropped-logo-1-1-e1650714110962.png" width="73" height="89">
+        </figure>
+  <title>AI object detection</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+</head>
+ <style>
+    /* Disable text selection */
+    html {
+      user-select: none;
+    }
+    /* Hide content when printing */
+    @media print {
+      html, body {
+        display: none;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <div>
+<style>
+    #current-time {
+      font-size: 24px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  </div>
+<body>
+  <h2 id="loadingText"><u>Object Detection Tool</u></h2>
+  <h6 id="loadingText">Show the object in frame</h6>
+  <!-- video with size of 0px because of chrome -->
+  <video playsinline autoplay muted controls="true" id="video"></video>
+  <br><br>
+  <canvas id="c1"></canvas>
+  <br><br>
+  <table>
+    <tr>
+      <td>AI:</td>
+      <td>
+        <div class="switch">
+          <label>
+            Off
+            <input type="checkbox" id="ai" disabled>
+            <span class="lever"></span>
+            On
+          </label>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>FPS:</td>
+      <td>
+        <p class="range-field">
+          <input type="range" id="fps" min="1" max="60" value="50">
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    var modelIsLoaded = false;
+
+    // Create a ObjectDetector method
+    const objectDetector = ml5.objectDetector('cocossd', {}, modelLoaded);
+
+    // When the model is loaded
+    function modelLoaded() {
+      console.log("Model Loaded!");
+      modelIsLoaded = true;
+    }
+  </script>
+  <script src="video.js"></script>
+  <script src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+
+  <p id="current-time">Loading...</p>
+
+  <script>
+    function updateTime() {
+      // Get the current date and time
+      var now = new Date();
+      
+      // Extract hours, minutes, and seconds
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+
+      // Convert hours to AM/PM format
+      var ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12; // Handle midnight (0 hours)
+
+      // Format minutes and seconds with leading zeros
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+
+      // Construct the time string
+      var currentTimeString = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+      
+      // Display the time
+      document.getElementById('current-time').textContent = currentTimeString;
+    }
+    
+    // Update the time every second
+    setInterval(updateTime, 1000);
+    
+    // Initial call to display time immediately
+    updateTime();
+  </script>   
+ <hr>
+ <hr>
+   <h2 style="font-size: 20px;">Our Project Details</h2>
+  <p style="font-size: 18px;">
+    Team Leader - Dr. Upasana Lakhina mam.<br>
+  <p style="font-size: 15px;">
+    <br>Admin -   Sahil Saurav    2820197</br>
+    Members - Satvik Singh    2820217<br>
+ &emsp;&emsp;&emsp;&emsp;Ravi Ranjan     2820234<br>
+<hr>
+
+<p style="font-size: 18px;">
+Summery: <br>
+
+<p style="font-size: 12px;">
+<p> <span style="font-family: 'Times New Roman', Times, serif;">The proposed system is an advanced object detection tool utilizing artificial intelligence through a camera for real-time analysis of video streams, with a backend implemented in JavaScript. Its core feature lies in accurately identifying, localizing, and classifying objects within the camera's field of view. This functionality is empowered by deep learning algorithms, ensuring high accuracy and robustness across diverse object categories and environmental conditions. An enhanced feature of real-time tracking and trajectory prediction further augments the system, enabling dynamic monitoring and predictive analysis of object movements over time. Together, these capabilities facilitate applications in surveillance, security, retail analytics, industrial automation, traffic monitoring, sports analytics, and robotics, among others, by enhancing safety, efficiency, and decision-making processes, with the backend powered by JavaScript for seamless integration and flexibility.</span>
+ 
+</html>
