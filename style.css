@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+  background-color: #0a0a23; /* Dark blue background for deep space effect */
+  color: #7dfcff; /* Cyber neon pink color for text */
+  font-family: 'Orbitron', sans-serif; /* Orbitron font */
+  text-align: center;
+  background-image: url('space.jpg'); /* Add a space-themed background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+canvas#c1 {
+  border: 5px solid #39ff14; /* Neon green border */
+  box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14; /* Neon glow effect */
+}
+
+video {
+  width: 0px;
+  height: 0px;
+}
+
+table {
+  width: 80%; /* Set a fixed width for the table */
+  margin: 20px auto; /* Center the table with margin */
+  border-collapse: collapse; /* Collapse borders for a clean look */
+  border: 3px solid #7dfcff; /* Neon border for the table */
+}
+
+tr, td {
+  border: 1px solid #7dfcff; /* Neon border for table cells */
+  text-align: center;
+  padding: 10px; /* Add padding for spacing */
+  background-color: rgba(10, 10, 35, 0.8); /* Semi-transparent dark cells */
+  font-family: 'Orbitron', sans-serif; /* Orbitron font for table text */
+}
