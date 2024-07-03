@@ -11,5 +11,7 @@ tags.forEach((tag) => {
             tag.computedStyleMap.removeProperty{'background-color'};
             clearInterval(interval);
         }
+
+        
     }, 100);
 });
